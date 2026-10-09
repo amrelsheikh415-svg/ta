@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>تيلا الشام | TELLA</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#0e1b2c;--card:#162840;--ink:#f4efe6;--mut:#a9b4c4;--acc:#f28c28;--grn:#7cb342;--line:#243a58}
+:root[data-theme="dark"]{--bg:#0e1b2c;--card:#162840;--ink:#f4efe6;--mut:#a9b4c4;--line:#243a58}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#faf6ee;--card:#fff;--ink:#14233a;--mut:#5d6b80;--line:#e6dccb}}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Cairo,Tahoma,sans-serif;line-height:1.6}
+button{font:inherit;cursor:pointer;border:0}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.logo{font-weight:900;font-size:20px}.logo b{color:var(--acc)}
+.btn{background:var(--acc);color:#fff;padding:8px 16px;border-radius:999px;font-weight:700}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.hero{text-align:center;padding:56px 16px 44px;background:radial-gradient(circle at 50% 0,#f28c2833,transparent 60%)}
+.hero .em{font-size:44px;letter-spacing:8px}
+.hero h1{font-size:clamp(40px,10vw,72px);margin:6px 0 0;font-weight:900}
+.hero h1 b{color:var(--acc);display:block;letter-spacing:6px;font-size:.7em}
+.hero p{color:var(--mut);max-width:520px;margin:12px auto 22px}
+main{max-width:900px;margin:auto;padding:0 14px 120px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:12px 0;position:sticky;top:calc(env(safe-area-inset-top,0px) + 52px);background:var(--bg);z-index:4}
+.tabs button{white-space:nowrap;background:var(--card);color:var(--ink);padding:7px 14px;border-radius:999px;border:1px solid var(--line)}
+.tabs button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+h2{border-inline-start:4px solid var(--acc);padding-inline-start:10px;margin:26px 0 10px}
+.item{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin-bottom:8px}
+.item .n{flex:1}.item small{display:block;color:var(--mut)}
+.pr{color:var(--acc);font-weight:900}
+.add{background:var(--grn);color:#fff;width:34px;height:34px;border-radius:50%;font-size:20px;font-weight:900}
+.note{color:var(--mut);font-size:13px}
+footer{text-align:center;color:var(--mut);padding:30px 14px 110px;border-top:1px solid var(--line)}
+footer a{color:var(--acc);text-decoration:none;font-weight:700}
+#bar{position:fixed;inset-inline:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:6;background:var(--acc);color:#fff;border-radius:16px;padding:12px 16px;display:none;justify-content:space-between;align-items:center;font-weight:700;box-shadow:0 6px 24px #0006}
+.modal{position:fixed;inset:0;background:#000a;z-index:9;display:none;align-items:flex-end;justify-content:center}
+.modal.on{display:flex}
+.sheet{background:var(--bg);width:100%;max-width:560px;max-height:92%;overflow:auto;border-radius:20px 20px 0 0;padding:18px}
+.sheet input,.sheet textarea,.sheet select{width:100%;padding:10px;margin:5px 0 10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.qty button{width:28px;height:28px;border-radius:50%;background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.ord{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:10px}
+.ord.new{border-color:var(--acc);box-shadow:0 0 0 2px #f28c2844}
+.st{display:inline-block;padding:2px 10px;border-radius:99px;font-size:13px;background:var(--line)}
+.ok{color:var(--grn);font-weight:700}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">تيلا الشام <b>TELLA</b></div>
+  <div style="display:flex;gap:8px">
+    
+    <a class="btn" href="tel:01094327684" style="text-decoration:none">📞 اتصل</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="em">🌯 🍔 ☕ 🍨</div>
+  <h1>تيلا الشام<b>TELLA</b></h1>
+  <p>سندويشات سورية أصلية، شاورما، برجر، قهوة وآيس كريم. اطلب الآن وهنجهزلك طلبك.</p>
+  <button class="btn" style="padding:12px 28px;font-size:18px" onclick="document.getElementById('menu').scrollIntoView()">شوف المنيو واطلب</button>
+</section>
+
+<main id="menu">
+  <div class="tabs" id="tabs"></div>
+  <div id="list"></div>
+  <p class="note">الأسعار بالجنيه المصري.</p>
+</main>
+
+<footer>
+  <div><b>العنوان:</b> مول سيتي بلازا، بجوار الجامعة البريطانية، الدور الأول أعلى سبينس</div>
+  <p><a href="tel:01094327684">01094327684</a> · <a href="tel:01010634856">01010634856</a></p>
+</footer>
+
+<div id="bar" onclick="openCart()"><span id="bc"></span><span id="bt"></span></div>
+
+<div class="modal" id="mCart" onclick="if(event.target===this)this.classList.remove('on')"><div class="sheet" id="cartBox"></div></div>
+
+<script>
+const MENU=[
+["السندويشات السورية",[["بطاطا سوري",60],["فلافل سوري",60],["مكس فلافل وبطاطا",70],["مكس بطاطا وجبنة",70],["مكس بطاطا ولانشون",70],["هريسة مع جبنة",50],["جبنة وزعتر",50],["مسبحة",50]]],
+["سندويش فراخ ولحم",[["شاورما فراخ",120],["شاورما فراخ مع موزريلا",135],["شاورما لحم",150],["شاورما مكس فراخ ولحم",275],["برجر لحم",150],["برجر فراخ",120],["برغر كريسبي",120],["كفتة",150],["كريسبي",120],["زنجر",120],["لانشون فينو",65],["سجق فينو",65],["كبده فينو",65]]],
+["الوجبات",[["وجبة شاورما فراخ عربي",185,"مع بطاطس - توميه - مخلل - خبز محمر"],["وجبة شاورما لحم",220,"مع بطاطس وطحينة - مخلل - خبز محمر"],["وجبة كريسبي 3 قطع",200,"مع بطاطا - خبز محمر - توميه - مخلل - كتشب"],["وجبة كريسبي 5 قطع",250,"مع بطاطا - خبز محمر - توميه - مخلل - كتشب"],["وجبة كفتة",200,"مع بطاطا وخبز محمر وتومية ومخلل"],["وجبة كبة 5 قطع",185,"مع بطاطا - خبز محمر - توميه - مخلل - كتشب"],["وجبة مكس شاورما لحم وفراخ",280,"مع بطاطا وخبز محمر - توميه - مخلل - طحينة"],["وجبة مكس تيلا",300,"2ق كفتة + 2ق كبة + 2ق كريسبي + 2ق بورك جبنة"]]],
+["المقبلات",[["كبة",59],["بورك لحم",49],["بورك جبنة",45],["باكيت بطاطس",50],["علبة مسبحة",50],["علبة تومية",15],["علبة مخلل",15]]],
+["الآيس كريم والمشروبات",[["بولة آيس كريم",30],["2 بولة آيس كريم",50],["علبة آيس كريم نص كيلو",250],["رول آيس كريم بالفستق واللبن",300],["عصير سموزي توت",35],["آيس كوفي",75]]],
+["قسم البن (للكيلو)",[["بن (فاتح / وسط / غامق) ساده",800],["بن (فاتح / وسط / غامق) محوج",950],["بن خلطة سورية مع هيل",990],["بن خلطة سورية مع هيل اكسترا",1150],["اسبريسو",1200]]]
+];
+const $=id=>document.getElementById(id);
+let cart={};
+
+// ---- menu
+const flat=[];
+$('tabs').innerHTML=MENU.map((c,i)=>`<button onclick="document.getElementById('c${i}').scrollIntoView()">${c[0]}</button>`).join('');
+$('list').innerHTML=MENU.map((c,i)=>`<h2 id="c${i}">${c[0]}</h2>`+c[1].map(it=>{const id=flat.push(it)-1;
+ return `<div class="item"><div class="n">${it[0]}${it[2]?`<small>${it[2]}</small>`:''}</div><span class="pr">${it[1]}</span><button class="add" onclick="add(${id})">+</button></div>`}).join('')).join('');
+
+function add(i){cart[i]=(cart[i]||0)+1;upd()}
+function chg(i,d){cart[i]=(cart[i]||0)+d;if(cart[i]<=0)delete cart[i];upd();openCart()}
+function total(){return Object.entries(cart).reduce((s,[i,q])=>s+flat[i][1]*q,0)}
+function upd(){const n=Object.values(cart).reduce((a,b)=>a+b,0);
+ $('bar').style.display=n?'flex':'none';$('bc').textContent='🛒 '+n+' صنف';$('bt').textContent=total()+' ج.م'}
+
+function openCart(){
+ const rows=Object.entries(cart).map(([i,q])=>`<div class="row"><span>${flat[i][0]}</span><span class="qty"><button onclick="chg(${i},-1)">−</button> ${q} <button onclick="chg(${i},1)">+</button></span><b>${flat[i][1]*q}</b></div>`).join('');
+ $('cartBox').innerHTML=`<h2 style="margin-top:0">سلة الطلب</h2>${rows||'<p>السلة فاضية</p>'}
+ ${rows?`<p style="font-size:18px">الإجمالي: <b class="pr">${total()} ج.م</b></p>
+ <input id="fn" placeholder="الاسم"><input id="fp" type="tel" placeholder="رقم الموبايل">
+ <select id="ft"><option>استلام من المطعم</option><option>توصيل</option></select>
+ <textarea id="fa" rows="2" placeholder="العنوان (للتوصيل) / ملاحظات"></textarea>
+ <button class="btn" style="width:100%;padding:12px" onclick="send()">تأكيد الطلب</button>`:''}`;
+ $('mCart').classList.add('on')}
+
+function send(){
+ const name=$('fn').value.trim(),phone=$('fp').value.trim();
+ if(!name||phone.length<8){alert('من فضلك اكتب الاسم ورقم الموبايل');return}
+ const lines=Object.entries(cart).map(([i,q])=>'• '+flat[i][0]+' × '+q+' = '+flat[i][1]*q);
+ const msg='طلب جديد من موقع تيلا الشام\n\n'+lines.join('\n')+'\n\nالإجمالي: '+total()+' ج.م\nالاسم: '+name+'\nالموبايل: '+phone+'\nالنوع: '+$('ft').value+($('fa').value.trim()?'\nالعنوان/ملاحظات: '+$('fa').value.trim():'');
+ window.open('https://wa.me/201094327684?text='+encodeURIComponent(msg),'_blank');
+ cart={};upd();
+ $('cartBox').innerHTML='<h2 style="margin-top:0" class="ok">✅ تقريباً خلصنا!</h2><p>اضغط إرسال في واتساب عشان الطلب يوصل للمطعم. لو الصفحة ما فتحتش، كلمنا على 01094327684.</p><button class="btn" onclick="$(\'mCart\').classList.remove(\'on\')">تمام</button>';
+}
+
+</script>
+</body>
+</html>
